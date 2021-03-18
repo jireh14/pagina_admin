@@ -4,7 +4,7 @@ $def with(admin)
 <head>
     <style>
         body {
-            background-color: #EDEAEA;
+            background-image: url("/static/imagenes/14092.jpg");
             background-position:center;
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -14,28 +14,21 @@ $def with(admin)
         }
         @media only screen and (max-width: 740px) {
         body {
-            background-color: #EDEAEA;               
+            background-image: url("/static/imagenes/14092.jpg");              
         }
         }
         #view_admin{
-<<<<<<< HEAD
-            position: center;
-            width: 440px;
-            height: 440px;
-            left: center;
-=======
-
             position: absolute;
             width: 590px;
+            height: 500px;
             left: 30%;
->>>>>>> refs/remotes/origin/master
-            top: 100px;
+            top: 60px;
             background: #FFFFFF;
             border: 2px solid #B1BDC9;
             box-sizing: border-box;
             border-radius: 15px;
             padding-left: 30px;
-            padding-top: 30px;
+            padding-top: 10px;
             padding-right: 30px;
 
         }
@@ -56,7 +49,6 @@ $def with(admin)
 </head>
 
 <body>
-
 <div id="view_admin">
     <h4>
        <center><a href="/admin">Informacion del administrador</a> </center> 
@@ -88,13 +80,10 @@ $def with(admin)
         </p>
         <strong><label id="campos">Estado</label></strong>
         <div class="radio">
-            <label id="campos">
-                <input type="radio" name="status_admin" value=1 checked> Activo &nbsp;&nbsp;
-                <input type="radio" name="status_admin" value=0> Inactivo
-            </label>
+            <label id="campos"><input type="radio" name="status_admin" value=1 checked> Activo</label>
+            <label id="campos"><input type="radio" name="status_admin" value=0> Inactivo</label>
         </div>
         <br>
-        
         <div class="form-group">
         <label></label>
             <button id="send" name="send" class="form-control"></span> Guardar</button>

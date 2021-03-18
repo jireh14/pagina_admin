@@ -10,71 +10,13 @@ $def with(detalle_venta, message)
             background-attachment: fixed;
             background-size: cover;
             font face: "Didact Gothic";
-            font size: 45;
+            font size: 17px;
         }
         @media only screen and (max-width: 740px) {
         body {
             background-color: #EDEAEA;    
             
         }
-        }
-
-        #sesion{
-            position: absolute;
-            width: 580px;
-            height: 310px;
-            left: 443px;
-            top: 70px;
-            justify-content: center;
-
-            background: #F9F9F9;
-            border: 2px solid #F9F9F9;
-            box-sizing: border-box;
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-            border-radius: 15px;
-            
-
-
-        }
-        #h2{
-            position: center;
-            display: flex;
-            justify-content: center;
-            align-content: center;
-            flex-direction: column;
-        }
-
-        #ingresar{
-            position: center;
-            width: 200px;
-            height: 50px;
-            text-align: center;
-
-            background: #43A6EE;
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-            border-radius: 10px;
-            color: #43A6EE;
-            justify-content: center;
-        }
-
-        #boton_ingresar {
-            position: float: left;;
-            width: 200px;
-            height: 50px;
-            left: center;
-            top: center;
-
-            font-family: Didact Gothic;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 30px;
-            line-height: 39px;
-            display: flex;
-            align-items: center;
-            text-align: center;
-            position: center;
-            color: #F9F9F9;
-            justify-content: center;
         }
     </style>
 </head>
@@ -93,22 +35,27 @@ $if message != None:
     <input type="hidden" name="iddetalle_venta" id="iddetalle_venta" value="$detalle_venta.iddetalle_venta" />
 
     <div class="form-group">
-    <label for="idventa">idventa</label>
-    <input readonly id="idventa" type="text" class="form-control" name="idventa" size="30" value="$detalle_venta.idventa"/>
-</div><div class="form-group">
-    <label for="idproducto">idproducto</label>
-    <input readonly id="idproducto" type="text" class="form-control" name="idproducto" size="30" value="$detalle_venta.idproducto"/>
-</div><div class="form-group">
-    <label for="cantidad">cantidad</label>
-    <input readonly id="cantidad" type="text" class="form-control" name="cantidad" size="30" value="$detalle_venta.cantidad"/>
-</div><div class="form-group">
-    <label for="subtotal">subtotal</label>
-    <input readonly id="subtotal" type="text" class="form-control" name="subtotal" size="30" value="$detalle_venta.subtotal"/>
-</div>
+        <label for="idventa">Venta</label>
+        <input readonly id="idventa" type="text" class="form-control" name="idventa" size="30" value="$detalle_venta.idventa"/>
+    </div>
+    
+    <div class="form-group">
+        <label for="idproducto">Producto</label>
+        <input readonly id="idproducto" type="text" class="form-control" name="idproducto" size="30" value="$detalle_venta.idproducto"/>
+    </div>
+
+    <div class="form-group">
+        <label for="cantidad">Cantidad</label>
+        <input readonly id="cantidad" type="text" class="form-control" name="cantidad" size="30" value="$detalle_venta.cantidad"/>
+    </div>
+    <div class="form-group">
+        <label for="subtotal">Subtotal</label>
+        <input readonly id="subtotal" type="text" class="form-control" name="subtotal" size="30" value="$detalle_venta.subtotal"/>
+    </div>
 
     <div class="form-group">
         <label></label>
-        <button id="send" name="send" class="form-control"><span class="glyphicon glyphicon-trash"></span> Delete</button>
+        <button id="send" name="send" class="form-control"><span class="glyphicon glyphicon-trash"></span> Eliminar</button>
     </div>
 </form>
 <br>

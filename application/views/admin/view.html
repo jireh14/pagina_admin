@@ -10,7 +10,7 @@ $def with(admin)
             background-attachment: fixed;
             background-size: cover;
             font face: "Didact Gothic";
-            font size: 45;
+            font size: 17px;
         }
         @media only screen and (max-width: 740px) {
         body {
@@ -18,85 +18,98 @@ $def with(admin)
             
         }
         }
-
-        #sesion{
+        #view_admin{
             position: absolute;
-            width: 580px;
-            height: 310px;
-            left: 443px;
-            top: 70px;
-            justify-content: center;
-
-            background: #F9F9F9;
-            border: 2px solid #F9F9F9;
-            box-sizing: border-box;
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-            border-radius: 15px;
-            
-
-
-        }
-        #h2{
-            position: center;
-            display: flex;
-            justify-content: center;
-            align-content: center;
-            flex-direction: column;
-        }
-
-        #ingresar{
-            position: center;
-            width: 200px;
-            height: 50px;
-            text-align: center;
-
-            background: #43A6EE;
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-            border-radius: 10px;
-            color: #43A6EE;
-            justify-content: center;
-        }
-
-        #boton_ingresar {
-            position: float: left;;
-            width: 200px;
-            height: 50px;
+            width: 420px;
+            height: 440px;
             left: center;
-            top: center;
+            top: 100px;
 
+            background: #FFFFFF;
+            border: 2px solid #B1BDC9;
+            box-sizing: border-box;
+            border-radius: 15px;
+        }
+        #campos{
             font-family: Didact Gothic;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 30px;
-            line-height: 39px;
+            font-style: center;
+            font-weight: center;
+            font-size: 17px;
+            line-height: 22px;
             display: flex;
             align-items: center;
-            text-align: center;
-            position: center;
-            color: #F9F9F9;
-            justify-content: center;
+            left: center;
+            top: 120px;
+
+            color: #456583;
         }
     </style>
 </head>
 
 <body>
 <h3>
-    <a href="/admin">admin</a>
+    <a href="/admin">Administrador</a>
 </h3>
-<strong>Nombre Completo: </strong> $admin.apellidos_admin <br>
-num_cuenta: $admin.num_cuenta <br>
-nombre_banco: $admin.nombre_banco <br>
-tipo_tarjeta_admin: $admin.tipo_tarjeta_admin <br>
-num_tarjeta: $admin.num_tarjeta <br>
-telefono_admin: $admin.telefono_admin <br>
-correo_admin: $admin.correo_admin <br>
-password: $admin.password <br>
-privilege: $admin.privilege <br>
-user_hash: $admin.user_hash <br>
-change_pwd: $admin.change_pwd <br>
-status_admin: $admin.status_admin <br>
-created: $admin.created <br>
-
+<div id="view_admin">
+        <p id="campos">
+        Nombre completo: $admin.apellidos_admin <br>
+        </p>
+        <br>
+        <p id="campos">
+        Numero de cuenta: $admin.num_cuenta <br>
+        </p>
+        <br>
+        <p id="campos">
+        Nombre del banco: $admin.nombre_banco <br>
+        </p>
+        <br>
+        <p id="campos">
+        Tipo de tarjeta: $admin.tipo_tarjeta_admin <br>
+        </p>
+        <br>
+        <p id="campos">
+        Numero de tarjeta: $admin.num_tarjeta <br>
+        </p>
+        <br>
+        <p id="campos">
+        Telefono: $admin.telefono_admin <br>
+        </p>
+        <br>
+        <p id="campos">
+        Correo: $admin.correo_admin <br>
+        </p>
+        <br>
+        <p id="campos">
+        Contraseña: $admin.password <br>
+        </p>
+        <br>
+        <p id="campos">
+        Privilegio: $admin.privilege <br>
+        </p>
+        <br>
+        <p id="campos">
+        Usuario: $admin.user_hash <br>
+        </p>
+        <br>
+        <p id="campos">
+        Cambiar contraseña: $admin.change_pwd <br>
+        </p>
+        <br>
+        <label id="campos">Estado</label>
+        <div class="radio">
+            <label id="campos"><input type="radio" name="status_admin" value=1 checked>Activo</label>
+            <label id="campos"><input type="radio" name="status_admin" value=0>Inactivo</label>
+        </div>
+        <br>
+        <p id="campos">
+        Hora de registro: $admin.created <br>
+        </p>
+        <br>
+        <div class="form-group">
+        <label></label>
+            <button id="send" name="send" class="form-control"></span> Guardar</button>
+        </div>
+</div>
 <br>
 <br>
 </body>

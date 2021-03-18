@@ -8,8 +8,8 @@ $def with(admin)
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: cover;
-            font face: "Didact Gothic";
-            font-size: 17px;
+            font: "Didact Gothic";
+            font size: 45;
         }
         @media only screen and (max-width: 740px) {
         body {
@@ -21,24 +21,30 @@ $def with(admin)
 </head>
 
 <body>
-<h3>
-    <a href="/admin">Administrador</a>
-</h3>
-<table id="datos_tabla" class="table table-hover" cellspacing="0" width="100%">
-    <thead>
-        <th>Administrador</th>
-        <th>Editar</th>
-        <th>Eliminar</th>
-    </thead>
-    <tbody>
-        $for item in admin:
-        <tr>
-            <td><a href='/admin/view/$item.apellidos_admin'>$item.apellidos_admin $item.correo_admin</a></td>
-            <td><a href='/admin/edit/$item.nombre_admin'><span class="glyphicon glyphicon-pencil"></span></a></td>
-            <td><a href='/admin/delete/$item.nombre_admin'><span class="glyphicon glyphicon-trash"></span></a></td>
-        </tr>
-    </tbody>
-</table>
-<br>
-<br>
+    <h3>
+        <a href="/admin">Administradores</a>
+    </h3>
+    <table id="datos_tabla" class="table table-hover" cellspacing="0" width="100%">
+        <thead>
+            <th>Administrador</th>
+            <th>Correo</th>
+            <th>Telefono</th>
+            <th>Fecha de registro</th>
+            <th>Editar</th>
+            <th>Eliminar</th>
+        </thead>
+        <tbody>
+            $for item in admin:
+            <tr>
+                <td><a href='/admin/view/$item.nombre_admin'>$item.apellidos_admin</a></td>
+                <td><a href='/admin/view/$item.nombre_admin'>$item.correo_admin</a></td>
+                <td><a href='/admin/view/$item.nombre_admin'>$item.telefono_admin</a></td>
+                <td><a href='/admin/view/$item.nombre_admin'>$item.created</a></td>
+                <td><a href='/admin/edit/$item.nombre_admin'><span class="glyphicon glyphicon-pencil"></span></a></td>
+                <td><a href='/admin/delete/$item.nombre_admin'><span class="glyphicon glyphicon-trash"></span></a></td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <br>
 </body>

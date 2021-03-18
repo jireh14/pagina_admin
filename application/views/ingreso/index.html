@@ -22,11 +22,14 @@ $def with(ingreso)
 
 <body>
 <h3>
-    <a href="/ingreso">Ingresos</a>
+    <a href="/ingreso">Compras</a>
 </h3>
 <table id="datos_tabla" class="table table-hover" cellspacing="0" width="100%">
     <thead>
-        <th>Ingresos</th>
+        <th>Codigo de compra </th>
+        <th>Fecha de compra</th>
+        <th>Tipo de comprobante</th>
+        <th>Total</th>
         <th>Editar</th>
         <th>Eliminar</th>
     </thead>
@@ -34,6 +37,9 @@ $def with(ingreso)
         $for item in ingreso:
         <tr>
             <td><a href='/ingreso/view/$item.idingreso'>$item.idingreso</a></td>
+            <td><a href='/ingreso/view/$item.idingreso'>$item.fecha_ingreso</a></td>
+            <td><a href='/ingreso/view/$item.idingreso'>$item.tipo_comprobante</a></td>
+            <td><a href='/ingreso/view/$item.idingreso'>$item.total</a></td>
             <td><a href='/ingreso/edit/$item.idingreso'><span class="glyphicon glyphicon-pencil"></span></a></td>
             <td><a href='/ingreso/delete/$item.idingreso'><span class="glyphicon glyphicon-trash"></span></a></td>
         </tr>

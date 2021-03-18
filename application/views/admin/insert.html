@@ -1,0 +1,164 @@
+<html>
+<head>
+    <style>
+        body {
+            background-color: #EDEAEA;
+            background-position:center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            font face: "Didact Gothic";
+            font size: 45;
+        }
+        @media only screen and (max-width: 740px) {
+        body {
+            background-color: #EDEAEA;    
+            
+        }
+        }
+
+        #sesion{
+            position: absolute;
+            width: 580px;
+            height: 310px;
+            left: 443px;
+            top: 70px;
+            justify-content: center;
+
+            background: #F9F9F9;
+            border: 2px solid #F9F9F9;
+            box-sizing: border-box;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 15px;
+            
+
+
+        }
+        #h2{
+            position: center;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-direction: column;
+        }
+
+        #ingresar{
+            position: center;
+            width: 200px;
+            height: 50px;
+            text-align: center;
+
+            background: #43A6EE;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 10px;
+            color: #43A6EE;
+            justify-content: center;
+        }
+
+        #boton_ingresar {
+            position: float: left;;
+            width: 200px;
+            height: 50px;
+            left: center;
+            top: center;
+
+            font-family: Didact Gothic;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 30px;
+            line-height: 39px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            position: center;
+            color: #F9F9F9;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+<h3>
+    <a href="/admin">Insertar nuevo Administrador</a>
+</h3>
+<form action="" method="post" enctype="multipart/form-data">
+
+    <div class="form-group">
+        <label for="nombre_admin">Nombre</label>
+        <input required id="nombre_admin" type="text" class="form-control" name="nombre_admin" size="100"/>
+    </div>
+
+    <div class="form-group">
+        <label for="apellidos_admin">Apellidos</label>
+        <input required id="apellidos_admin" type="text" class="form-control" name="apellidos_admin" size="100"/>
+    </div>
+
+    <div class="form-group">
+        <label for="num_cuenta">Numero de cuenta</label>
+        <input required id="num_cuenta" type="number" class="form-control" name="num_cuenta" size="30"/>
+    </div>
+
+    <div class="form-group">
+        <label for="nombre_banco">Banco</label>
+        <input required id="nombre_banco" type="text" class="form-control" name="nombre_banco" size="30"/>
+    </div>
+
+    <div class="form-group">
+        <label for="tipo_tarjeta_admin">Tipo de tarjeta</label>
+        <div class="radio">
+            <label><input type="radio" name="tipo_tarjeta_admin" value=0 checked>Debito</label>
+        </div>
+        <div class="radio">
+            <label><input type="radio" name="tipo_tarjeta_admin" value=1>Credito</label>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="num_tarjeta">Numero de tarjeta</label>
+        <input required id="num_tarjeta" type="text" class="form-control" name="num_tarjeta" size="30"/>
+    </div>
+    
+    <div class="form-group">
+        <label for="telefono_admin">Telefono</label>
+        <input required id="telefono_admin" type="text" class="form-control" name="telefono_admin" size="30"/>
+    </div> 
+
+    <div class="form-group">
+        <label for="correo_admin">Correo</label>
+        <input required id="correo_admin" type="email" class="form-control" name="correo_admin" size="30"/>
+    </div>
+
+    <div class="form-group">
+        <label for="password">Contraseña</label>
+        <input required id="password" type="password" class="form-control" name="password" size="30"/>
+    </div>
+
+    <div class="form-group">
+        <label for="status_admin">Estado</label>
+        <div class="radio">
+            <label><input type="radio" name="status_admin" value=0 checked>Inactivo</label>
+        </div>
+        <div class="radio">
+            <label><input type="radio" name="status_admin" value=1>Activo</label>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="change_pwd">¿Cambiar contraseña?</label>
+        <div class="radio">
+            <label><input type="radio" name="change_pwd" value=0 checked>No</label>
+        </div>
+        <div class="radio">
+            <label><input type="radio" name="change_pwd" value=1>Si</label>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label></label>
+        <button id="send" name="send" class="form-control"><span class="glyphicon glyphicon-save"></span> Guardar</button>
+    </div>
+</form>
+<br>
+<br>
+<br>
+</body>

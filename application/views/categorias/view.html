@@ -1,0 +1,76 @@
+$def with(categorias)
+
+<html>
+<head>
+    <style>
+        body {
+            background-color: #EDEAEA;
+            background-position:center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            font face: "Didact Gothic";
+            font size: 45;
+        }
+        @media only screen and (max-width: 740px) {
+        body {
+            background-color: #EDEAEA;    
+            
+        }
+        }
+        #categorias{
+            position: absolute;
+            width: 400px;
+            height: 300px;
+            left: center;
+            top: 100px;
+
+            background: #FFFFFF;
+            border: 2px solid #B1BDC9;
+            box-sizing: border-box;
+            border-radius: 15px;
+        }
+        #campos{
+            font-family: Didact Gothic;
+            font-style: center;
+            font-weight: center;
+            font-size: 17px;
+            line-height: 22px;
+            display: flex;
+            align-items: center;
+            left: center;
+            top: 120px;
+
+            color: #456583;
+        }
+    </style>
+</head>
+
+<body>
+<h3>
+    <a href="/categorias">Categorias</a>
+</h3>
+
+<div id="categorias">
+        <p id="campos">
+        Nombre de la categoria: $categorias.nombre_cat <br>
+        </p>
+        <br>
+        <p id="campos">
+        Descripción: $categorias.descripcion_cat <br>
+        </p>
+        <br>
+        <label id="campos">Estado</label>
+        <div class="radio">
+            <label id="campos"><input type="radio" name="status_cat" value=1 checked>Activo</label>
+            <label id="campos"><input type="radio" name="status_cat" value=0>Inactivo</label>
+        </div>
+        <br>
+        <div class="form-group">
+        <label></label>
+        <button id="send" name="send" class="form-control"></span> Guardar</button>
+    </div>
+    </div>
+<br>
+<br>
+</body>

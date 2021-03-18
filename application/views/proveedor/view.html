@@ -1,0 +1,79 @@
+$def with(proveedor)
+
+<html>
+<head>
+    <style>
+        body {
+            background-color: #EDEAEA;
+            background-position:center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            font face: "Didact Gothic";
+            font size: 45;
+        }
+        @media only screen and (max-width: 740px) {
+        body {
+            background-color: #EDEAEA;    
+            
+        }
+        }
+        #proveedor{
+            position: absolute;
+            width: 400px;
+            height: 350px;
+            left: center;
+            top: 100px;
+
+            background: #FFFFFF;
+            border: 2px solid #B1BDC9;
+            box-sizing: border-box;
+            border-radius: 15px;
+        }
+        #campos{
+            font-family: Didact Gothic;
+            font-style: center;
+            font-weight: center;
+            font-size: 17px;
+            line-height: 22px;
+            display: flex;
+            align-items: center;
+            left: center;
+            top: 120px;
+
+            color: #456583;
+        }
+    </style>
+</head>
+
+<body>
+<h3>
+    <a href="/proveedor">Proveedor</a>
+</h3>
+    <div id="proveedor">
+        <p id="campos">
+        <img src="/static/imagenes/usuario.png" height="20px" width="20px" align="left">Nombre: $proveedor.nombre_pro <br></img>
+        </p>
+        <br>
+        <p id="campos">
+        <img src="/static/imagenes/telephone.png" height="20px" width="20px" align="left">Telefono: $proveedor.telefono_pro <br></img>
+        </p>
+        <br>
+        <p id="campos">
+        <img src="/static/imagenes/email.png" height="20px" width="20px" align="left">Contacto: $proveedor.correo_pro <br></img>
+        </p>
+        <br>
+        <label id="campos">Estado</label>
+        <div class="radio">
+            <label id="campos"><input type="radio" name="status_prov" value=1 checked>Activo</label>
+            <label id="campos"><input type="radio" name="status_prov" value=0>Inactivo</label>
+        </div>
+        <br>
+        <div class="form-group">
+        <label></label>
+        <button id="send" name="send" class="form-control"></span> Guardar</button>
+    </div>
+    </div>
+<br>
+<br>
+</body>

@@ -1,0 +1,112 @@
+$def with(producto)
+
+<html>
+<head>
+    <style>
+        body {
+            background-color: #EDEAEA;
+            background-position:center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            font face: "Didact Gothic";
+            font size: 45;
+        }
+        @media only screen and (max-width: 740px) {
+        body {
+            background-color: #EDEAEA;    
+            
+        }
+        }
+
+        #sesion{
+            position: absolute;
+            width: 580px;
+            height: 310px;
+            left: 443px;
+            top: 70px;
+            justify-content: center;
+
+            background: #F9F9F9;
+            border: 2px solid #F9F9F9;
+            box-sizing: border-box;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 15px;
+            
+
+
+        }
+        #h2{
+            position: center;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-direction: column;
+        }
+
+        #ingresar{
+            position: center;
+            width: 200px;
+            height: 50px;
+            text-align: center;
+
+            background: #43A6EE;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 10px;
+            color: #43A6EE;
+            justify-content: center;
+        }
+
+        #boton_ingresar {
+            position: float: left;;
+            width: 200px;
+            height: 50px;
+            left: center;
+            top: center;
+
+            font-family: Didact Gothic;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 30px;
+            line-height: 39px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            position: center;
+            color: #F9F9F9;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+<h3>
+    <a href="/producto">Productos</a>
+</h3>
+<table id="datos_tabla" class="table table-hover" cellspacing="0" width="100%">
+    <thead>
+        <th>Producto</th>
+        <th>Imagen</th>
+        <th>Descripcion</th>
+        <th>Existencias</th>
+        <th>Precio</th>
+        <th>Estado</th>
+        <th>Editar</th>
+
+    </thead>
+    <tbody>
+        $for item in producto:
+        <tr>
+            <td><a href='/producto/view/$item.idproducto'>$item.nom_producto </a></td>
+            <td><img src='/static/imagenes/$item.img_producto'></img></td>
+            <td><a href='/producto/view/$item.idproducto'>$item.descripcion </a></td>
+            <td><a href='/producto/view/$item.idproducto'>$item.existencia</a></td>
+            <td><a href='/producto/view/$item.idproducto'>$item.precio_salida</a></td>
+            <td><a href='/producto/view/$item.idproducto'>$item.status_prod</a></td>
+            <td><a href='/producto/edit/$item.idproducto'><span class="glyphicon glyphicon-pencil"></span></a></td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<br>
+</body>

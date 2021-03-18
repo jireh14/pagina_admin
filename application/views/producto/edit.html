@@ -1,0 +1,144 @@
+$def with(producto, message)
+
+<html>
+<head>
+    <style>
+        body {
+            background-color: #EDEAEA;
+            background-position:center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            font face: "Didact Gothic";
+            font size: 45;
+        }
+        @media only screen and (max-width: 740px) {
+        body {
+            background-color: #EDEAEA;    
+            
+        }
+        }
+
+        #sesion{
+            position: absolute;
+            width: 580px;
+            height: 310px;
+            left: 443px;
+            top: 70px;
+            justify-content: center;
+
+            background: #F9F9F9;
+            border: 2px solid #F9F9F9;
+            box-sizing: border-box;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 15px;
+            
+
+
+        }
+        #h2{
+            position: center;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-direction: column;
+        }
+
+        #ingresar{
+            position: center;
+            width: 200px;
+            height: 50px;
+            text-align: center;
+
+            background: #43A6EE;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 10px;
+            color: #43A6EE;
+            justify-content: center;
+        }
+
+        #boton_ingresar {
+            position: float: left;;
+            width: 200px;
+            height: 50px;
+            left: center;
+            top: center;
+
+            font-family: Didact Gothic;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 30px;
+            line-height: 39px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            position: center;
+            color: #F9F9F9;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+<h3>
+    <a href="/producto">Productos</a>
+</h3>
+$if message != None:
+    <div class="alert alert-warning">
+        <strong>Advertencia </strong> $message
+    </div>
+    <br>
+<form action="" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="idproducto" id="idproducto" value="$producto.idproducto" />
+
+    <div class="form-group">
+        <label for="idcategorias">Categoria</label>
+        <input required id="idcategorias" type="text" class="form-control" name="idcategorias" size="30" value="$producto.idcategorias"/>
+    </div>
+    
+    <div class="form-group">
+        <label for="img_producto">Imagen</label>
+        <input required id="img_producto" type="text" class="form-control" name="img_producto" size="30" value="$producto.img_producto"/>
+    </div>
+    
+    <div class="form-group">
+        <label for="nom_producto">Nombre del producto</label>
+        <input required id="nom_producto" type="text" class="form-control" name="nom_producto" size="30" value="$producto.nom_producto"/>
+    </div>
+    
+    <div class="form-group">
+        <label for="precio_salida">Precio</label>
+        <input required id="precio_salida" type="text" class="form-control" name="precio_salida" size="30" value="$producto.precio_salida"/>
+    </div>
+    
+    <div class="form-group">
+        <label for="descripcion">Descripcion</label>
+        <input required id="descripcion" type="text" class="form-control" name="descripcion" size="30" value="$producto.descripcion"/>
+    </div>
+    
+    <div class="form-group">
+        <label for="marca">Marca</label>
+        <input required id="marca" type="text" class="form-control" name="marca" size="30" value="$producto.marca"/>
+    </div>
+    
+    <div class="form-group">
+        <label for="existencia">Existencias</label>
+        <input required id="existencia" type="text" class="form-control" name="existencia" size="30" value="$producto.existencia"/>
+    </div>
+    
+    <div class="form-group">
+        <label>Estado</label>
+    <div class="radio">
+        <label><input type="radio" name="status_prod" value=1 checked> Activo</label>
+        <label><input type="radio" name="status_prod" value=0 >Inactivo</label>
+    </div>
+
+    <div class="form-group">
+        <label></label>
+        <button id="send" name="send" class="form-control"><span class="glyphicon glyphicon-pencil"></span> Edit</button>
+    </div>
+</form>
+<br>
+<br>
+<br>
+</body>

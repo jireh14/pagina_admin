@@ -1,0 +1,169 @@
+$def with(users, message)
+
+<html>
+<head>
+    <style>
+        body {
+            background-color: #EDEAEA;
+            background-position:center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            font face: "Didact Gothic";
+            font size: 45;
+        }
+        @media only screen and (max-width: 740px) {
+        body {
+            background-color: #EDEAEA;    
+            
+        }
+        }
+
+        #sesion{
+            position: absolute;
+            width: 580px;
+            height: 310px;
+            left: 443px;
+            top: 70px;
+            justify-content: center;
+
+            background: #F9F9F9;
+            border: 2px solid #F9F9F9;
+            box-sizing: border-box;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 15px;
+            
+
+
+        }
+        #h2{
+            position: center;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-direction: column;
+        }
+
+        #ingresar{
+            position: center;
+            width: 200px;
+            height: 50px;
+            text-align: center;
+
+            background: #43A6EE;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 10px;
+            color: #43A6EE;
+            justify-content: center;
+        }
+
+        #boton_ingresar {
+            position: float: left;;
+            width: 200px;
+            height: 50px;
+            left: center;
+            top: center;
+
+            font-family: Didact Gothic;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 30px;
+            line-height: 39px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            position: center;
+            color: #F9F9F9;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+<h3>
+    <a href="/admin">Administrador</a>
+</h3>
+$if message != None:
+    <div class="alert alert-warning">
+        <strong>Advertencia </strong> $message
+    </div>
+
+<form action="" method="post" enctype="multipart/form-data">
+        <input type="hidden" name="nombre_admin" id="nombre_admin" value="$admin.nombre_admin" />
+    <div class="form-group">
+        <label for="nombre_admin">Nombre</label>
+        <input readonly id="nombre_admin" type="text" class="form-control" name="nombre_admin" size="30" value="$admin.nombre_admin.split('!')[0]"/>
+    </div>
+
+    <div class="form-group">
+        <label for="apellidos_admin">Apellidos</label>
+        <input required id="apellidos_admin" type="text" class="form-control" name="apellidos_admin" size="30" value="$admin.apellidos_admin"/>
+    </div>
+
+    <div class="form-group">
+        <label for="num_cuenta">Numero de cuenta</label>
+        <input required id="num_cuenta" type="text" class="form-control" name="num_cuenta" size="30" value="$admin.num_cuenta"/>
+    </div>
+
+    <div class="form-group">
+        <label for="nombre_banco">Banco</label>
+        <input required id="nombre_banco" type="text" class="form-control" name="nombre_banco" size="30" value="$admin.nombre_banco"/>
+    </div>
+
+    <div class="form-group">
+        <label>Tipo de tarjeta</label>
+        <select readonly name="tipo_tarjeta_admin" id="tipo_tarjeta_admin" class="form-control" value="$admin.tipo_tarjeta_admin">
+          <option value=0>Debito</option>
+          <option value=1>Credito</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>Numero de tarjeta</label>
+        <input readonly id="num_tarjeta" type="text" class="form-control" name="num_tarjeta" size="30" value="$admin.num_tarjeta"/>
+    </div>
+
+    <div class="form-group">
+        <label>Telefono</label>
+        <input readonly id="telefono_admin" type="text" class="form-control" name="telefono_admin" size="30" value="$admin.telefono_admin"/>
+    </div>
+
+    <div class="form-group">
+        <label>Correo</label>
+        <input readonly id="correo_admin" type="email" class="form-control" name="correo_admin" size="30" value="$admin.correo_admin"/>
+    </div>
+
+    <div class="form-group">
+        <label>Contraseña</label>
+        <input required id="password" type="password" class="form-control" name="password" size="30" value="$admin.password"/>
+    </div>
+
+    <div class="form-group">
+        <label>¿Cambiar contraseña?</label>
+        $if admin.change_pwd == 0:
+             <div class="radio">
+                <label><input type="radio" name="change_pwd" value=0 checked>No</label>
+            </div>
+            <div class="radio">
+                <label><input type="radio" name="change_pwd" value=1>Si</label>
+            </div>
+
+        $else:
+             <div class="radio">
+                <label><input type="radio" name="change_pwd" value=0>No</label>
+            </div>
+            <div class="radio">
+                <label><input type="radio" name="change_pwd" value=1 checked>Si</label>
+            </div>
+    </div>
+
+    <div class="form-group">
+        <label></label>
+        <button id="send" name="send" class="form-control"><span class="glyphicon glyphicon-pencil"></span>  Actualizar</button>
+    </div>
+</form>
+<br>
+<br>
+<br>
+
+</body>

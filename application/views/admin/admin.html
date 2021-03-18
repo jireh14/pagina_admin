@@ -1,0 +1,64 @@
+$def with(params)
+$var nombre_admin: $params['nombre_admin']
+$var privilege: $params['privilege']
+
+<html>
+<head>
+    <style>
+        body {
+            background-color: #EDEAEA;
+            background-position:center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            font face: "Didact Gothic";
+            font size: 45;
+        }
+        @media only screen and (max-width: 740px) {
+        body {
+            background-color: #EDEAEA;    
+            
+        }
+        }
+
+        #ingresar{
+            position: center;
+            width: 200px;
+            height: 50px;
+            text-align: center;
+
+            background: #43A6EE;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 10px;
+            color: #43A6EE;
+            justify-content: center;
+        }
+
+        #boton_ingresar {
+            position: float: left;;
+            width: 200px;
+            height: 50px;
+            left: center;
+            top: center;
+
+            font-family: Didact Gothic;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 30px;
+            line-height: 39px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            position: center;
+            color: #F9F9F9;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+<h1>User $params['nombre_admin']</h1>
+<p>Sistema de ventas 2021</p>
+<br>
+<br>
+</body>

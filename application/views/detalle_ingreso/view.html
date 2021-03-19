@@ -3,7 +3,7 @@ $def with(detalle_ingreso)
 <head>
     <style>
         body {
-            background-color: #EDEAEA;
+            background-image: url("/static/imagenes/14092.jpg");
             background-position:center;
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -13,21 +13,22 @@ $def with(detalle_ingreso)
         }
         @media only screen and (max-width: 740px) {
         body {
-            background-color: #EDEAEA;    
-            
+            background-image: url("/static/imagenes/14092.jpg");          
         }
         }
-        #ingreso{
+        #view_ingreso{
             position: absolute;
-            width: 420px;
-            height: 440px;
-            left: center;
-            top: 100px;
-
+            width: 460px;
+            height: 360px;
+            left: 30%;
+            top: 60px;
             background: #FFFFFF;
             border: 2px solid #B1BDC9;
             box-sizing: border-box;
             border-radius: 15px;
+            padding-left: 30px;
+            padding-top: 10px;
+            padding-right: 30px;
         }
         #campos{
             font-family: Didact Gothic;
@@ -40,7 +41,7 @@ $def with(detalle_ingreso)
             left: center;
             top: 120px;
 
-            color: #456583;
+            color: #141516;
         }
     </style>
 </head>
@@ -49,21 +50,21 @@ $def with(detalle_ingreso)
 <h3>
     <a href="/detalle_ingreso">detalle_ingreso</a>
 </h3>
-<div id="ingreso">
+<div id="view_ingreso">
         <p id="campos">
-        Ingreso: $detalle_ingreso.idingreso_fk <br>
+        <strong>Ingreso: </strong> &nbsp; $detalle_ingreso.idingreso_fk <br>
         </p>
         <br>
         <p id="campos">
-        Producto: $detalle_ingreso.idproducto_fk <br>
+        <strong>Producto: </strong> &nbsp; $detalle_ingreso.idproducto_fk <br>
         </p>
         <br>
         <p id="campos">
-        Cantidad: $detalle_ingreso.cantidad_pro <br>
+        <strong>Cantidad: </strong> &nbsp; $detalle_ingreso.cantidad_pro <br>
         </p>
         <br>
         <p id="campos">
-        Precio: $detalle_ingreso.precio_in <br>
+        <strong>Precio: </strong> &nbsp; $detalle_ingreso.precio_in <br>
         </p>
         <br>
         <div class="form-group">

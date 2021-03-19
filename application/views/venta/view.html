@@ -4,7 +4,7 @@ $def with(venta)
 <head>
     <style>
         body {
-            background-color: #EDEAEA;
+            background-image: url("/static/imagenes/14092.jpg");
             background-position:center;
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -14,80 +14,64 @@ $def with(venta)
         }
         @media only screen and (max-width: 740px) {
         body {
-            background-color: #EDEAEA;    
+            background-image: url("/static/imagenes/14092.jpg");
             
         }
         }
-
-        #sesion{
+        #view_venta{
             position: absolute;
-            width: 580px;
-            height: 310px;
-            left: 443px;
-            top: 70px;
-            justify-content: center;
-
-            background: #F9F9F9;
-            border: 2px solid #F9F9F9;
+            width: 460px;
+            height: 360px;
+            left: 30%;
+            top: 60px;
+            background: #FFFFFF;
+            border: 2px solid #B1BDC9;
             box-sizing: border-box;
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
             border-radius: 15px;
-            
-
-
+            padding-left: 30px;
+            padding-top: 10px;
+            padding-right: 30px;
         }
-        #h2{
-            position: center;
-            display: flex;
-            justify-content: center;
-            align-content: center;
-            flex-direction: column;
-        }
-
-        #ingresar{
-            position: center;
-            width: 200px;
-            height: 50px;
-            text-align: center;
-
-            background: #43A6EE;
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-            border-radius: 10px;
-            color: #43A6EE;
-            justify-content: center;
-        }
-
-        #boton_ingresar {
-            position: float: left;;
-            width: 200px;
-            height: 50px;
-            left: center;
-            top: center;
-
+        #campos{
             font-family: Didact Gothic;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 30px;
-            line-height: 39px;
+            font-style: center;
+            font-weight: center;
+            font-size: 17px;
+            line-height: 22px;
             display: flex;
             align-items: center;
-            text-align: center;
-            position: center;
-            color: #F9F9F9;
-            justify-content: center;
+            left: center;
+            top: 120px;
+
+            color: #456583;
         }
     </style>
 </head>
-
 <body>
 <h3>
     <a href="/venta">Ventas</a>
 </h3>
-idusuario: $venta.idusuario <br>
-total: $venta.total <br>
-idformapago: $venta.idformapago <br>
-fecha_venta: $venta.fecha_venta <br>
-
+<div id="view_venta">
+        <p id="campos">
+        <strong>Usuario: </strong> &nbsp; $venta.idusuario<br>
+        </p>
+        <br>
+        <p id="campos">
+        <strong>Total: </strong> &nbsp; $venta.total <br>
+        </p>
+        <br>
+        <p id="campos">
+        <strong>Forma de pago: </strong> &nbsp; $venta.idformapago <br>
+        </p>
+        <br>
+        <p id="campos">
+        <strong>Fecha de venta: </strong> &nbsp; $venta.fecha_venta <br>
+        </p>
+        <br>
+        <div class="form-group">
+        <label></label>
+            <button id="send" name="send" class="form-control"></span> Guardar</button>
+        </div>
 <br>
 <br>
 </body>

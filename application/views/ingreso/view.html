@@ -4,7 +4,7 @@ $def with(ingreso)
 <head>
     <style>
         body {
-            background-color: #EDEAEA;
+            background-image: url("/static/imagenes/14092.jpg");
             background-position:center;
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -14,20 +14,22 @@ $def with(ingreso)
         }
         @media only screen and (max-width: 740px) {
         body {
-            background-color: #EDEAEA;               
+            background-image: url("/static/imagenes/14092.jpg");       
         }
         }  
         #view_ingreso{
             position: absolute;
-            width: 420px;
-            height: 440px;
-            left: center;
-            top: 100px;
-
+            width: 460px;
+            height: 360px;
+            left: 30%;
+            top: 60px;
             background: #FFFFFF;
             border: 2px solid #B1BDC9;
             box-sizing: border-box;
             border-radius: 15px;
+            padding-left: 30px;
+            padding-top: 10px;
+            padding-right: 30px;
         }
         #campos{
             font-family: Didact Gothic;
@@ -44,34 +46,33 @@ $def with(ingreso)
         }
     </style>
 </head>
-
 <body>
 <h3>
     <a href="/ingreso">Ingresos</a>
 </h3>
 <div id="view_ingreso">
         <p id="campos">
-        Proveedor: $ingreso.idproveedor<br>
+        <strong>Proveedor: </strong> &nbsp; $ingreso.idproveedor<br>
         </p>
         <br>
         <p id="campos">
-        Fecha de ingreso: $ingreso.fecha_ingreso <br>
+        <strong>Fecha de ingreso: </strong> &nbsp; $ingreso.fecha_ingreso <br>
         </p>
         <br>
         <p id="campos">
-        Tipo de comprobante: $ingreso.tipo_comprobante <br>
+        <strong>Tipo de comprobante: </strong> &nbsp; $ingreso.tipo_comprobante <br>
         </p>
         <br>
         <p id="campos">
-        Serie de comprobante: $ingreso.serie_comprobante <br>
+        <strong>Serie de comprobante: </strong> &nbsp; $ingreso.serie_comprobante <br>
         </p>
         <br>
         <p id="campos">
-        Numero de comprobante: $ingreso.numero_comprobante <br>
+        <strong>Numero de comprobante: </strong> &nbsp; $ingreso.numero_comprobante <br>
         </p>
         <br>
         <p id="campos">
-        Total: $ingreso.total <br>
+        <strong>Total: </strong> &nbsp; $ingreso.total <br>
         </p>
         <br>
         <div class="form-group">

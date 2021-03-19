@@ -8,71 +8,12 @@
             background-attachment: fixed;
             background-size: cover;
             font face: "Didact Gothic";
-            font size: 45;
+            font size: 17px;
         }
         @media only screen and (max-width: 740px) {
         body {
-            background-color: #EDEAEA;    
-            
+            background-color: #EDEAEA;               
         }
-        }
-
-        #sesion{
-            position: absolute;
-            width: 580px;
-            height: 310px;
-            left: 443px;
-            top: 70px;
-            justify-content: center;
-
-            background: #F9F9F9;
-            border: 2px solid #F9F9F9;
-            box-sizing: border-box;
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-            border-radius: 15px;
-            
-
-
-        }
-        #h2{
-            position: center;
-            display: flex;
-            justify-content: center;
-            align-content: center;
-            flex-direction: column;
-        }
-
-        #ingresar{
-            position: center;
-            width: 200px;
-            height: 50px;
-            text-align: center;
-
-            background: #43A6EE;
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-            border-radius: 10px;
-            color: #43A6EE;
-            justify-content: center;
-        }
-
-        #boton_ingresar {
-            position: float: left;;
-            width: 200px;
-            height: 50px;
-            left: center;
-            top: center;
-
-            font-family: Didact Gothic;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 30px;
-            line-height: 39px;
-            display: flex;
-            align-items: center;
-            text-align: center;
-            position: center;
-            color: #F9F9F9;
-            justify-content: center;
         }
     </style>
 </head>
@@ -84,48 +25,71 @@
 <form action="" method="post" enctype="multipart/form-data">
 
     <div class="form-group">
-    <label for="nombre">nombre</label>
-    <input required id="nombre" type="text" class="form-control" name="nombre" size="30"/>
-</div><div class="form-group">
-    <label for="apellidos">apellidos</label>
-    <input required id="apellidos" type="text" class="form-control" name="apellidos" size="30"/>
-</div><div class="form-group">
-    <label for="correo_usuario">correo_usuario</label>
-    <input required id="correo_usuario" type="text" class="form-control" name="correo_usuario" size="30"/>
-</div><div class="form-group">
-    <label for="contrasena">contrasena</label>
-    <input required id="contrasena" type="text" class="form-control" name="contrasena" size="30"/>
-</div><div class="form-group">
-    <label for="calle_num">calle_num</label>
-    <input required id="calle_num" type="text" class="form-control" name="calle_num" size="30"/>
-</div><div class="form-group">
-    <label for="colonia">colonia</label>
-    <input required id="colonia" type="text" class="form-control" name="colonia" size="30"/>
-</div><div class="form-group">
-    <label for="codigo_postal">codigo_postal</label>
-    <input required id="codigo_postal" type="text" class="form-control" name="codigo_postal" size="30"/>
-</div><div class="form-group">
-    <label for="ciudad">ciudad</label>
-    <input required id="ciudad" type="text" class="form-control" name="ciudad" size="30"/>
-</div><div class="form-group">
-    <label for="estado">estado</label>
-    <input required id="estado" type="text" class="form-control" name="estado" size="30"/>
-</div><div class="form-group">
-    <label for="referencias">referencias</label>
-    <input required id="referencias" type="text" class="form-control" name="referencias" size="30"/>
-</div><div class="form-group">
-    <label for="fecha_reg_usu">fecha_reg_usu</label>
-    <input required id="fecha_reg_usu" type="text" class="form-control" name="fecha_reg_usu" size="30"/>
-</div><div class="form-group">
-    <label for="status_user">status_user</label>
-    <input required id="status_user" type="text" class="form-control" name="status_user" size="30"/>
-</div>
+        <label for="nombre">Nombre</label>
+        <input required id="nombre" type="text" class="form-control" name="nombre" size="30" value="$usuario.nombre"/>
+    </div>
+    
+    <div class="form-group">
+        <label for="apellidos">Apellidos</label>
+        <input required id="apellidos" type="text" class="form-control" name="apellidos" size="30" value="$usuario.apellidos"/>
+    </div>
+    
+    <div class="form-group">
+        <label for="correo_usuario">Correo</label>
+        <input required id="correo_usuario" type="text" class="form-control" name="correo_usuario" size="30" value="$usuario.correo_usuario"/>
+    </div>
+    
+    <div class="form-group">
+        <label for="contrasena">Contraseña</label>
+        <input required id="contrasena" type="text" class="form-control" name="contrasena" size="30" value="$usuario.contrasena"/>
+    </div>
+    
+    <div class="form-group">
+        <label for="calle_num">Dirección</label>
+        <input required id="calle_num" type="text" class="form-control" name="calle_num" size="30" value="$usuario.calle_num"/>
+    </div>
+    
+    <div class="form-group">
+        <label for="colonia">Colonia</label>
+        <input required id="colonia" type="text" class="form-control" name="colonia" size="30" value="$usuario.colonia"/>
+    </div>
+    
+    <div class="form-group">
+        <label for="codigo_postal">Codigo postal</label>
+        <input required id="codigo_postal" type="text" class="form-control" name="codigo_postal" size="30" value="$usuario.codigo_postal"/>
+    </div>
+    
+    <div class="form-group">
+        <label for="ciudad">Ciudad</label>
+        <input required id="ciudad" type="text" class="form-control" name="ciudad" size="30" value="$usuario.ciudad"/>
+    </div>
+    
+    <div class="form-group">
+        <label for="estado">Estado</label>
+        <input required id="estado" type="text" class="form-control" name="estado" size="30" value="$usuario.estado"/>
+    </div>
+    
+    <div class="form-group">
+        <label for="referencias">Referencias</label>
+        <input required id="referencias" type="text" class="form-control" name="referencias" size="30" value="$usuario.referencias"/>
+    </div>
+    
+    <div class="form-group">
+        <label for="fecha_reg_usu">Fecha de registro</label>
+        <input required id="fecha_reg_usu" type="text" class="form-control" name="fecha_reg_usu" size="30" value="$usuario.fecha_reg_usu"/>
+    </div>
+    
+    <div class="form-group">
+        <label for="status_user">Estado</label>
+        <input required id="status_user" type="text" class="form-control" name="status_user" size="30" value="$usuario.status_user"/>
+    </div>
 
     <div class="form-group">
         <label></label>
-        <button id="send" name="send" class="form-control"><span class="glyphicon glyphicon-save"></span> Save</button>
+        <button id="send" name="send" class="form-control"><span class="glyphicon glyphicon-pencil"></span> Guardar</button>
     </div>
 </form>
+<br>
 <br>
 <br>
 </body>

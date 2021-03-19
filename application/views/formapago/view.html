@@ -4,7 +4,7 @@ $def with(formapago)
 <head>
     <style>
         body {
-            background-color: #EDEAEA;
+            background-image: url("/static/imagenes/14092.jpg");
             background-position:center;
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -14,21 +14,22 @@ $def with(formapago)
         }
         @media only screen and (max-width: 740px) {
         body {
-            background-color: #EDEAEA;    
-            
+            background-image: url("/static/imagenes/14092.jpg");           
         }
         }
         #view_pago{
             position: absolute;
-            width: 420px;
-            height: 440px;
-            left: center;
-            top: 100px;
-
+            width: 460px;
+            height: 360px;
+            left: 30%;
+            top: 60px;
             background: #FFFFFF;
             border: 2px solid #B1BDC9;
             box-sizing: border-box;
             border-radius: 15px;
+            padding-left: 30px;
+            padding-top: 10px;
+            padding-right: 30px;
         }
         #campos{
             font-family: Didact Gothic;
@@ -41,7 +42,7 @@ $def with(formapago)
             left: center;
             top: 120px;
 
-            color: #456583;
+            color: #141516;
         }
     </style>
 </head>
@@ -52,31 +53,31 @@ $def with(formapago)
 </h3>
 <div id="view_pago">
         <p id="campos">
-        Efectivo: $formapago.efectivo <br>
+        <strong>Efectivo: </strong> &nbsp; $formapago.efectivo <br>
         </p>
         <br>
         <p id="campos">
-        Banco: $formapago.banco <br>
+        <strong>Banco: </strong> &nbsp; $formapago.banco <br>
         </p>
         <br>
         <p id="campos">
-        Nombre del titular: $formapago.nom_titular <br>
+        <strong>Nombre del titular: </strong> &nbsp; $formapago.nom_titular <br>
         </p>
         <br>
         <p id="campos">
-        Numero de cuenta: $formapago.num_cuenta <br>
+        <strong>Numero de cuenta: </strong> &nbsp; $formapago.num_cuenta <br>
         </p>
         <br>
         <p id="campos">
-        Numero de tarjeta: $formapago.num_tarjeta <br>
+        <strong>Numero de tarjeta: </strong> &nbsp; $formapago.num_tarjeta <br>
         </p>
         <br>
         <p id="campos">
-        Fecha de vencimiento: $formapago.fecha_ven <br>
+        <strong>Fecha de vencimiento: </strong> &nbsp; $formapago.fecha_ven <br>
         </p>
         <br>
         <p id="campos">
-        Nip: $formapago.nip <br>
+        <strong>Nip: </strong> &nbsp; $formapago.nip <br>
         </p>
         <br>
         <div class="form-group">

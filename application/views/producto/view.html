@@ -4,77 +4,46 @@ $def with(producto)
 <head>
     <style>
         body {
-            background-color: #EDEAEA;
+            background-image: url("/static/imagenes/14092.jpg");
             background-position:center;
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: cover;
             font face: "Didact Gothic";
-            font size: 45;
+            font size: 17px;
         }
         @media only screen and (max-width: 740px) {
         body {
-            background-color: #EDEAEA;    
-            
+            background-image: url("/static/imagenes/14092.jpg");            
         }
         }
-
-        #sesion{
+          
+        #view_producto{
             position: absolute;
-            width: 580px;
-            height: 310px;
-            left: 443px;
-            top: 70px;
-            justify-content: center;
-
-            background: #F9F9F9;
-            border: 2px solid #F9F9F9;
+            width: 460px;
+            height: 360px;
+            left: 30%;
+            top: 60px;
+            background: #FFFFFF;
+            border: 2px solid #B1BDC9;
             box-sizing: border-box;
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
             border-radius: 15px;
-            
-
-
+            padding-left: 30px;
+            padding-top: 10px;
+            padding-right: 30px;
         }
-        #h2{
-            position: center;
-            display: flex;
-            justify-content: center;
-            align-content: center;
-            flex-direction: column;
-        }
-
-        #ingresar{
-            position: center;
-            width: 200px;
-            height: 50px;
-            text-align: center;
-
-            background: #43A6EE;
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-            border-radius: 10px;
-            color: #43A6EE;
-            justify-content: center;
-        }
-
-        #boton_ingresar {
-            position: float: left;;
-            width: 200px;
-            height: 50px;
-            left: center;
-            top: center;
-
+        #campos{
             font-family: Didact Gothic;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 30px;
-            line-height: 39px;
+            font-style: center;
+            font-weight: center;
+            font-size: 17px;
+            line-height: 22px;
             display: flex;
             align-items: center;
-            text-align: center;
-            position: center;
-            color: #F9F9F9;
-            justify-content: center;
+            left: center;
+            top: 120px;
+
+            color: #456583;
         }
     </style>
 </head>
@@ -94,11 +63,12 @@ $def with(producto)
         <th>Marca</th>
         <th>existencia</th>
         <th>Estado</th>
+        <th>Editar</th>
     </thead>
     <tbody>
         <tr>
             <td>$producto.idcategorias</td>
-            <td><img src='/static/imagenes/$producto.img_producto'></img></td>
+            <td><img src='/static/imagenes/$producto.img_producto' width="120px" height="120px"></img></td>
             <td>$producto.nom_producto</td>
             <td>$producto.precio_salida</td>
             <td>$producto.descripcion</td>

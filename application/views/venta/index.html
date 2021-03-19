@@ -26,14 +26,19 @@ $def with(venta)
 </h3>
 <table id="datos_tabla" class="table table-hover" cellspacing="0" width="100%">
     <thead>
-        <th>Ventas</th>
-        <th>Editar</th>
-        <th>Eliminar</th>
+        <th>Codigo de venta</th>
+        <th>Usuario</th>
+        <th>Total</th>
+        <th>Fecha de Venta</th>
+
     </thead>
     <tbody>
         $for item in venta:
         <tr>
             <td><a href='/venta/view/$item.idventa'>$item.idventa</a></td>
+            <td><a href='/venta/view/$item.idventa'>$item.idusuario</a></td>
+            <td><a href='/venta/view/$item.idventa'>$item.total</a></td>
+            <td><a href='/venta/view/$item.idventa'>$item.fecha_venta</a></td>
             <td><a href='/venta/edit/$item.idventa'><span class="glyphicon glyphicon-pencil"></span></a></td>
             <td><a href='/venta/delete/$item.idventa'><span class="glyphicon glyphicon-trash"></span></a></td>
         </tr>

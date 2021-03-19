@@ -31,25 +31,23 @@ def delete_venta(idventa):
         return None
 
 
-def insert_venta(idusuario,total,idformapago,fecha_venta):
+def insert_venta(idusuario,total,idformapago):
     try:
         return db.insert('venta',idusuario=idusuario,
 total=total,
-idformapago=idformapago,
-fecha_venta=fecha_venta)
+idformapago=idformapago)
     except Exception as e:
         print "Model insert Error {}".format(e.args)
         print "Model insert Message {}".format(e.message)
         return None
 
 
-def edit_venta(idventa,idusuario,total,idformapago,fecha_venta):
+def edit_venta(idventa,idusuario,total,idformapago):
     try:
         return db.update('venta',idventa=idventa,
 idusuario=idusuario,
 total=total,
 idformapago=idformapago,
-fecha_venta=fecha_venta,
                   where='idventa=$idventa',
                   vars=locals())
     except Exception as e:

@@ -45,6 +45,6 @@ class Insert:
 
         # call model insert_venta and try to insert new data
         config.model.insert_venta(
-            form['idusuario'],form['total'],form['idformapago'],form['fecha_venta'],
+            form['idusuario'],form['total'],form['idformapago'],
         )
         raise config.web.seeother('/venta') # render venta index.html

@@ -102,7 +102,7 @@ $if message != None:
     
         <div class="form-group">
             <label>Numero de cuenta</label>
-            <input required id="num_cuenta type="number" class="form-control" name="num_cuenta" value= $admin.num_cuenta size="30"/>
+            <input required id="num_cuenta" type="number" class="form-control" name="num_cuenta" value= $admin.num_cuenta size="18"/>
         </div>
     
         <div class="form-group">
@@ -122,12 +122,12 @@ $if message != None:
     
         <div class="form-group">
             <label>Numero de tarjeta</label>
-            <input required id="num_tarjeta" type="text" class="form-control" name="num_tarjeta" value= $admin.num_tarjeta size="30"/>
+            <input required id="num_tarjeta" type="number" class="form-control" name="num_tarjeta" value= $admin.num_tarjeta size="16"/>
         </div>
         
         <div class="form-group">
             <label>Telefono</label>
-            <input required id="telefono_admin" type="text" class="form-control" name="telefono_admin" value= $admin.telefono_admin size="30"/>
+            <input required id="telefono_admin" type="number" class="form-control" name="telefono_admin" value= $admin.telefono_admin size="30"/>
         </div> 
     
         <div class="form-group">
@@ -140,7 +140,6 @@ $if message != None:
             <input required id="password" type="password" class="form-control" name="password" value= $admin.password size="30"/>
         </div>
 
-        
     <div class="form-group">
         <label>Privilege</label>
         <select readonly name="privilege" id="privilege" class="form-control" value="$admin.privilege">

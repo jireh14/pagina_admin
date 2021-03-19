@@ -40,7 +40,7 @@ def delete_admin(nombre_admin):
         return None
 
 
-def insert_admin(nombre_admin,apellidos_admin,num_cuenta,nombre_banco,tipo_tarjeta_admin,num_tarjeta,telefono_admin,correo_admin,password,privilege,user_hash,change_pwd,status_admin,created):
+def insert_admin(nombre_admin,apellidos_admin,num_cuenta,nombre_banco,tipo_tarjeta_admin,num_tarjeta,telefono_admin,correo_admin,password,privilege,user_hash,change_pwd,status_admin):
     try:
         db.insert('admin',
             nombre_admin=nombre_admin,
@@ -55,15 +55,14 @@ def insert_admin(nombre_admin,apellidos_admin,num_cuenta,nombre_banco,tipo_tarje
             privilege=privilege,
             user_hash=user_hash,
             change_pwd=change_pwd,
-            status_admin=status_admin,
-            created=created)
+            status_admin=status_admin)
     except Exception as e:
         print "Model insert Error {}".format(e.args)
         print "Model insert Message {}".format(e.message)
         return None
 
 
-def edit_admin(nombre_admin,apellidos_admin,num_cuenta,nombre_banco,tipo_tarjeta_admin,num_tarjeta,telefono_admin,correo_admin,password,privilege,user_hash,change_pwd,status_admin,created):
+def edit_admin(nombre_admin,apellidos_admin,num_cuenta,nombre_banco,tipo_tarjeta_admin,num_tarjeta,telefono_admin,correo_admin,password,privilege,user_hash,change_pwd,status_admin):
     try:
         return db.update('admin',
             nombre_admin=nombre_admin,
@@ -79,7 +78,6 @@ def edit_admin(nombre_admin,apellidos_admin,num_cuenta,nombre_banco,tipo_tarjeta
             user_hash=user_hash,
             change_pwd=change_pwd,
             status_admin=status_admin,
-            created=created,
             
             where='nombre_admin=$nombre_admin',
             vars=locals())

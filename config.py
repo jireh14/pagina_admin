@@ -2,8 +2,8 @@ import web
 
 db_host = 'localhost'
 db_name = 'web_admin'
-db_user = 'admin2'
-db_pw = 'admin2.2021'
+db_user = 'admin'
+db_pw = 'admin.2021'
 
 db = web.database(
     dbn='mysql',

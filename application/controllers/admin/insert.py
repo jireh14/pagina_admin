@@ -53,8 +53,7 @@ class Insert:
             form['privilege'],
             user_hash,
             form['change_pwd'],
-            form['status_admin'],
-            form['created']
+            form['status_admin']
             # always ask for change the default password
         )
         raise config.web.seeother('/') # render users index.html

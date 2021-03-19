@@ -45,6 +45,6 @@ class Insert:
 
         # call model insert_ingreso and try to insert new data
         config.model.insert_ingreso(
-            form['idproveedor'],form['fecha_ingreso'],form['tipo_comprobante'],form['serie_comprobante'],form['numero_comprobante'],form['total'],
+            form['idproveedor'],form['tipo_comprobante'],form['serie_comprobante'],form['numero_comprobante'],form['total'],
         )
         raise config.web.seeother('/ingreso') # render ingreso index.html

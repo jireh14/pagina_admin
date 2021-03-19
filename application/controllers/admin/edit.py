@@ -68,8 +68,7 @@ class Edit:
             form['privilege'],
             form['user_hash'],
             form['change_pwd'],
-            form['status_admin'],
-            form['created']
+            form['status_admin']
         )
         if result == None: # Error on udpate values
             nombre_admin = config.check_secure_val(str(nombre_admin)) # validate HMAC username

@@ -31,10 +31,9 @@ def delete_ingreso(idingreso):
         return None
 
 
-def insert_ingreso(idproveedor,fecha_ingreso,tipo_comprobante,serie_comprobante,numero_comprobante,total):
+def insert_ingreso(idproveedor,tipo_comprobante,serie_comprobante,numero_comprobante,total):
     try:
         return db.insert('ingreso',idproveedor=idproveedor,
-fecha_ingreso=fecha_ingreso,
 tipo_comprobante=tipo_comprobante,
 serie_comprobante=serie_comprobante,
 numero_comprobante=numero_comprobante,
@@ -45,11 +44,10 @@ total=total)
         return None
 
 
-def edit_ingreso(idingreso,idproveedor,fecha_ingreso,tipo_comprobante,serie_comprobante,numero_comprobante,total):
+def edit_ingreso(idingreso,idproveedor,tipo_comprobante,serie_comprobante,numero_comprobante,total):
     try:
         return db.update('ingreso',idingreso=idingreso,
 idproveedor=idproveedor,
-fecha_ingreso=fecha_ingreso,
 tipo_comprobante=tipo_comprobante,
 serie_comprobante=serie_comprobante,
 numero_comprobante=numero_comprobante,
